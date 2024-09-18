@@ -62,6 +62,7 @@ document.getElementById("weightForm").addEventListener("submit", function(event)
 });
 
 
+
     document.addEventListener('contextmenu', function(event) {
         event.preventDefault();
     });
@@ -69,12 +70,24 @@ document.getElementById("weightForm").addEventListener("submit", function(event)
 
     document.addEventListener('keydown', function(event) {
 
-        if (event.ctrlKey && event.key === 'u') {
+        if (event.key === 'ع' || event.key === 'u') {
             event.preventDefault();
         }
 
-        if (event.ctrlKey && event.shiftKey && event.key === 'i') {
-            event.preventDefault();
+
+        if (event.ctrlKey) {
+
+            if (event.key === 'a') {
+                event.preventDefault();
+            }
+
+            if (event.shiftKey && event.key === 'i') {
+                event.preventDefault();
+            }
+
+            if (event.key === 's') {
+                event.preventDefault();
+            }
         }
 
         if (event.key === 'F12') {
